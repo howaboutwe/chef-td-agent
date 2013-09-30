@@ -56,7 +56,7 @@ package "td-agent" do
     ["ubuntu", "debian"] => {"default" => "-f --force-yes"},
     "default" => nil
   )
-  action :upgrade
+  version node[:td_agent][:version]
 end
 
 service "td-agent" do
